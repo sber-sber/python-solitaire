@@ -22,25 +22,24 @@ class Card:
 class Deck:
     def __init__(self) -> None:
         # hearts, diamonds, clubs, spades
-        deck = []
+        self._deck = []
         suits = ("H", "D", "C", "S")
         values = ("2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A")
         for suit in suits:
             for value in values:
-                deck.append(Card(suit, value))
+                self._deck.append(Card(suit, value))
     
     def get_deck(self):
-        print(deck)
-        # return self._deck
+        return self._deck
     
-    # def get_shorthand_deck(self):
-        
+    def get_shorthand_deck(self):
 
-    #     shorthand_deck = []
-    #     for card in deck:
-    #         shorthand_deck.append(f"{card.get_value}{card.get_suit}")
-    #             # self._value}{self._suit}"
-    #     return shorthand_deck
+        # pass
+        shorthand_deck = []
+        for card in self._deck:
+            shorthand_deck.append(f"{card.get_value()}{card.get_suit()}")
+                # self._value}{self._suit}"
+        return shorthand_deck
 
 
 class GameBoard:
@@ -70,6 +69,9 @@ class Game():
     
 
 
-deck = Deck()
+game_deck = Deck()
 # print(deck.get_shorthand_deck())
-print(deck.get_deck())
+# print(game_deck)
+
+# print(game_deck.get_deck())
+print(game_deck.get_shorthand_deck())

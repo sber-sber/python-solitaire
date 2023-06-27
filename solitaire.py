@@ -1,3 +1,4 @@
+# import PyQt6
 from typing import Any
 
 
@@ -17,6 +18,8 @@ class Card:
 
     def get_shorthand_card(self):
         return f"{self._value}{self._suit}"
+    
+    #todo: figure out GUI "hooks"
 
 
 class Deck:
@@ -40,6 +43,8 @@ class Deck:
             shorthand_deck.append(f"{card.get_value()}{card.get_suit()}")
                 # self._value}{self._suit}"
         return shorthand_deck
+
+    # todo: create shuffle and deal/start methods 
 
 
 class GameBoard:
